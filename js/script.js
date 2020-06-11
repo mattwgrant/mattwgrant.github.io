@@ -28,7 +28,7 @@ let quotes = [
 function getRandomQuote() {
 	// for ( let i = 0; i < quotes.length; i++ ) {
 		newQuote = `<p class="quote">${quotes[Math.floor(Math.random() * quotes.length)].quote}</p>`;
-		newQuote += `<p class="source">${quotes.source}</p>`;
+		newQuote += `<p class="source">${newQuote.source}</p>`;
 		if ( quotes.citation === true && quotes.year === true ) {
 			newQuote += `<span class="citation">${newQuote.citation}</span>`;
 			newQuote += `<span class="year">${newQuote.year}</span>`;
@@ -42,15 +42,17 @@ function getRandomQuote() {
 	// }
 	return newQuote;
 }
-document.getElementById('quote-box').innerHTML = (getRandomQuote());
+
 
 /***
  * `printQuote` function
 ***/
 
-// function printQuote() {
+// Selects the ID for where to insert the text generated from the getRandomQuote function
 
-// }
+function printQuote() {
+	document.getElementById('quote-box').innerHTML = getRandomQuote();
+}
 
 
 /***
@@ -58,4 +60,4 @@ document.getElementById('quote-box').innerHTML = (getRandomQuote());
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-// document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote').addEventListener("click", printQuote, false);
