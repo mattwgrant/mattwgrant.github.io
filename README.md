@@ -1,0 +1,1 @@
+This is my first project for my Full Stack JavaScript Tech Degree. This is a random quote generator.
