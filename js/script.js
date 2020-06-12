@@ -19,17 +19,19 @@ let quotes = [
 	{quote: `Go home bugs, go to your mommy!`, source: `My friends' two year old daughter`},
 	{quote: `Get your facts first, then you can distort them as you please.`, source: `Mark Twain`, year: `1856` },
 	{quote: `What's another word for Thesaurus?`, source: `Steven Wright`},
-	{quote: `I refuse to join any club that would have me as a memeber.`, source: `Groucho Marx` }
+	{quote: `I refuse to join any club that would have me as a memeber.`, source: `Groucho Marx`, category: `Stand Up Comedy` },
+	{quote: `If it isn't ol' Two Eyes himself`, source: `Guy that Eats Steak`, citation: `The Characters`, year: `2018`, category: `TV Show` },
+	{quote: `That's the crazy part. It could literally have been any of us`, source: `Man in Hot Dog Suit`, citation: `I Think You Should Leave`, year: `2019`, category: `TV Show` }
 ];
 
-// let colors = [
-// 	red,
-// 	blue,
-// 	yellow,
-// 	green,
-// 	purple,
-// 	pink
-// ];
+let colors = [
+	`red`,
+	`blue`,
+	`yellow`,
+	`green`,
+	`purple`,
+	`pink`
+];
 
 let newQuote;
 // let newColor;
@@ -53,12 +55,16 @@ function getRandomQuote() {
 	return newQuote
 }
 
-// function getRandomColor() {
-// 	let background = Math.floor(Math.random() * colors.length);
-// 	newColor = colors[background];
+/***
+	This function is very similar to get RandomQuotes except this one accesses the colors array to change the background color
+***/
 
-// 	return newColor;
-// }
+function getRandomColor() {
+	let background = Math.floor(Math.random() * colors.length);
+	newColor = colors[background];
+
+	return newColor;
+}
 
 
 /***
@@ -70,8 +76,9 @@ function getRandomQuote() {
 	it builds a string of HTML in another variable, displayQuote, using the property selector to get each part
 	of the object to display. The if statements ensure that as long as the properties specified are not undefined,
 	the information from them will be displayed. Finally, the function targets the HTML elements so that the newly
-	created string is properly displayed. All of this is triggered by the click of the button, coded in the 
-	pre-written code at the bottom of the page.
+	created string is properly displayed. It also sets a varaible that holds the call for getRandomColor. The next line
+	targets the 'container' element to change the background color. All of this is triggered by the click of the button, 
+	coded in the pre-written code at the bottom of the page.
 ***/
 
 function printQuote() {
@@ -96,9 +103,15 @@ function printQuote() {
 	displayQuote += `</p>`;
 
 	document.getElementById('quote-box').innerHTML = displayQuote;
-	// document.querySelector('body').background = newColor;
+
+	let backgroundColor = getRandomColor();
+	document.querySelector('.container').style.backgroundColor = newColor;
 	
 }
+
+// function switchQuote() {
+// 	setTimeOut('printQuote()', 2000);
+// }
 
 
 /***
