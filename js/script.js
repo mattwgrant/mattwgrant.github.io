@@ -14,14 +14,50 @@ project 1 - A Random Quote Generator
 
 
 let quotes = [
-	{quote: `If you're not first, you're last.`, source: `Ricky Bobby`, citation: `Talladega Nights`, year: `2006`, category: `Movie`},
-	{quote: `You miss 100% of the shots you don't take. -Wayne Gretzky`, source: `Michael Scott`, citation: `The Office`, category: `TV Show`},
-	{quote: `Go home bugs, go to your mommy!`, source: `My friends' two year old daughter`},
-	{quote: `Get your facts first, then you can distort them as you please.`, source: `Mark Twain`, year: `1856` },
-	{quote: `What's another word for Thesaurus?`, source: `Steven Wright`},
-	{quote: `I refuse to join any club that would have me as a memeber.`, source: `Groucho Marx`, category: `Stand Up Comedy` },
-	{quote: `If it isn't ol' Two Eyes himself`, source: `Guy that Eats Steak`, citation: `The Characters`, year: `2018`, category: `TV Show` },
-	{quote: `That's the crazy part. It could literally have been any of us`, source: `Man in Hot Dog Suit`, citation: `I Think You Should Leave`, year: `2019`, category: `TV Show` }
+	{
+		quote: `If you're not first, you're last.`, 
+		source: `Ricky Bobby`, 
+		citation: `Talladega Nights`, 
+		year: `2006`, 
+		category: `Movie`
+	},
+	{
+		quote: `You miss 100% of the shots you don't take. -Wayne Gretzky`, 
+		source: `Michael Scott`, 
+		citation: `The Office`, 
+		category: `TV Show`
+	},
+	{
+		quote: `Go home bugs, go to your mommy!`, 
+		source: `My friends' two year old daughter`
+	},
+	{
+		quote: `Get your facts first, then you can distort them as you please.`, 
+		source: `Mark Twain`, 
+		year: `1856` },
+	{
+		quote: `What's another word for Thesaurus?`, 
+		source: `Steven Wright`
+	},
+	{
+		quote: `I refuse to join any club that would have me as a memeber.`, 
+		source: `Groucho Marx`, 
+		category: `Stand Up Comedy` 
+	},
+	{
+		quote: `If it isn't ol' Two Eyes himself`, 
+		source: `Guy that Eats Steak`, 
+		citation: `The Characters`, 
+		year: `2018`, 
+		category: `TV Show` 
+	},
+	{
+		quote: `That's the crazy part. It could literally have been any of us`, 
+		source: `Man in Hot Dog Suit`, 
+		citation: `I Think You Should Leave`, 
+		year: `2019`, 
+		category: `TV Show` 
+	}
 ];
 
 let colors = [
@@ -34,8 +70,8 @@ let colors = [
 ];
 
 let newQuote;
-// let newColor;
-// citation, year, etc
+
+
 /***
  * `getRandomQuote` function
 ***/
@@ -106,12 +142,9 @@ function printQuote() {
 
 	let backgroundColor = getRandomColor();
 	document.querySelector('.container').style.backgroundColor = newColor;
-	
+
 }
 
-// function switchQuote() {
-// 	setTimeOut('printQuote()', 2000);
-// }
 
 
 /***
