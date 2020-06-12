@@ -27,15 +27,16 @@ let quotes = [
 ***/
 function getRandomQuote() {
 	// for ( let i = 0; i < quotes.length; i++ ) {
-		newQuote = `<p class="quote">${quotes[Math.floor(Math.random() * quotes.length)].quote}</p>`;
-		newQuote += `<p class="source">${newQuote.source}</p>`;
-		if ( quotes.citation === true && quotes.year === true ) {
-			newQuote += `<span class="citation">${newQuote.citation}</span>`;
-			newQuote += `<span class="year">${newQuote.year}</span>`;
+		let grabQuote = Math.floor(Math.random() * quotes.length)
+		newQuote = `<p class="quote">${quotes[grabQuote].quote}</p>`;
+		newQuote += `<p class="source">${quotes[grabQuote].source}</p>`;
+		if ( quotes[grabQuote].citation === true && quotes[grabQuote].year === true ) {
+			newQuote += `<span class="citation">${quotes[grabQuote].citation}</span>`;
+			newQuote += `<span class="year">${quotes[grabQuote].year}</span>`;
 		} else if ( quotes.citation === true ) {
-			newQuote += `<span class="citation">${newQuote.citation}</span>`;
+			newQuote += `<span class="citation">${quotes[grabQuote].citation}</span>`;
 		} else if ( quotes.year === true ) {
-		newQuote += `<span class="year">${newQuote.year}</span>`;
+		newQuote += `<span class="year">${quotes[grabQuote].year}</span>`;
 		
 	}
 		
