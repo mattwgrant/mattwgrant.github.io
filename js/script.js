@@ -11,7 +11,7 @@ project 1 - A Random Quote Generator
  * `quotes` array 
 ***/
 // empty variable to store my information from getRandomQuote in
-let newQuote = '';
+
 
 let quotes = [
 	{quote: `If you're not first, you're last.`, source: `Ricky Bobby`, citation: `Talladega Nights`, year: `2006`},
@@ -22,6 +22,7 @@ let quotes = [
 	{quote: `I refuse to join any club that would have me as a memeber.`, source: `Groucho Marx` }
 ];
 
+let newQuote;
 // citation, year, etc
 /***
  * `getRandomQuote` function
@@ -34,24 +35,25 @@ function getRandomQuote() {
 		// the if statement checks to see if the objects have a citation or year property that are not undefined
 		// using null caused all quotes to have an "undefined" for citation and year whereas checking that they are not 
 		// undefined makes something only show up if there is a property and a value that matches this
+		// let grabQuote = Math.floor(Math.random() * quotes.length);
+		// newQuote = `<p class="quote">${quotes[grabQuote].quote}</p>`;
+		// newQuote += `<p class="source">${quotes[grabQuote].source}`;
+		// if ( quotes[grabQuote].citation !== undefined && quotes[grabQuote].year !== undefined ) {
+		// 	newQuote += `<span class="citation">${quotes[grabQuote].citation}</span>`;
+		// 	newQuote += `<span class="year">${quotes[grabQuote].year}</span></p>`;
+		// } else if ( quotes[grabQuote].citation !== undefined ) {
+		// 	newQuote += `<span class="citation">${quotes[grabQuote].citation}</span></p>`;
+		// } else if ( quotes[grabQuote].year !== undefined ) {
+		// newQuote += `<span class="year">${quotes[grabQuote].year}</span></p>`;
+		// } else {
+		// 	newQuote += `</p>`;
+		// }
+		
 		let grabQuote = Math.floor(Math.random() * quotes.length);
-		newQuote = `<p class="quote">${quotes[grabQuote].quote}</p>`;
-		newQuote += `<p class="source">${quotes[grabQuote].source}`;
-		if ( quotes[grabQuote].citation !== undefined && quotes[grabQuote].year !== undefined ) {
-			newQuote += `<span class="citation">${quotes[grabQuote].citation}</span>`;
-			newQuote += `<span class="year">${quotes[grabQuote].year}</span></p>`;
-		} else if ( quotes[grabQuote].citation !== undefined ) {
-			newQuote += `<span class="citation">${quotes[grabQuote].citation}</span></p>`;
-		} else if ( quotes[grabQuote].year !== undefined ) {
-		newQuote += `<span class="year">${quotes[grabQuote].year}</span></p>`;
-		} else {
-			newQuote += `</p>`;
-		}
+		newQuote = quotes[grabQuote];
 		
 	
-		
-	
-	return newQuote;
+	return newQuote
 }
 
 
@@ -64,8 +66,24 @@ function getRandomQuote() {
 // this function targets the class 'quote-box' so that when the button is clicked, this function is called and it takes
 // the information generated in the getRandomQuote function and displays it to the page
 function printQuote() {
-	let printHTML = getRandomQuote();
-	document.getElementById('quote-box').innerHTML = printHTML;
+
+	
+	let randomQuote = getRandomQuote();
+	let displayQuote = `<p class="quote">${randomQuote.quote}</p>`;
+	displayQuote += `<p class="source">${randomQuote.source}`;
+	if ( randomQuote.citation !== undefined && randomQuote.year !== undefined ) {
+			displayQuote += `<span class="citation">${randomQuote.citation}</span>`;
+			displayQuote += `<span class="year">${randomQuote.year}</span></p>`;
+		} else if ( randomQuote.citation !== undefined ) {
+			randomQuote += `<span class="citation">${randomQuote.citation}</span></p>`;
+		} else if ( randomQuote.year !== undefined ) {
+		displayQuote += `<span class="year">${randomQuote.year}</span></p>`;
+		} else {
+			displayQuote += `</p>`;
+		}
+	
+		document.getElementById('quote-box').innerHTML = displayQuote;
+	
 }
 
 
