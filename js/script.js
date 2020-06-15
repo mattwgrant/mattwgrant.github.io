@@ -113,7 +113,7 @@ function getRandomColor() {
 	of the object to display. The if statements ensure that as long as the properties specified are not undefined,
 	the information from them will be displayed. Finally, the function targets the HTML elements so that the newly
 	created string is properly displayed. It also sets a varaible that holds the call for getRandomColor. The next line
-	targets the 'container' element to change the background color. All of this is triggered by the click of the button, 
+	targets the body element to change the background color. All of this is triggered by the click of the button, 
 	coded in the pre-written code at the bottom of the page.
 ***/
 
