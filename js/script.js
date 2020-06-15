@@ -45,14 +45,14 @@ let quotes = [
 		category: `Stand Up Comedy` 
 	},
 	{
-		quote: `If it isn't ol' Two Eyes himself`, 
+		quote: `If it isn't ol' Two Eyes himself!`, 
 		source: `Guy that Eats Steak`, 
 		citation: `The Characters`, 
 		year: `2018`, 
 		category: `TV Show` 
 	},
 	{
-		quote: `That's the crazy part. It could literally have been any of us`, 
+		quote: `That's the crazy part. It could literally have been any of us.`, 
 		source: `Man in Hot Dog Suit`, 
 		citation: `I Think You Should Leave`, 
 		year: `2019`, 
