@@ -4,6 +4,6 @@ This uses a function to that randomly selects an object from the array and anoth
 
 Extra Credit
 - I added an array of colors that change randomly when the quotes change
-- I isplayed additional properties with a few of the objects
+- I displayed additional properties with a few of the objects
 - I added my own additional properties to some of the objects that display with those quotes
 - The quotes change automatically every 3 seconds
