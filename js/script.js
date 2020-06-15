@@ -141,7 +141,7 @@ function printQuote() {
 	document.getElementById('quote-box').innerHTML = displayQuote;
 
 	let backgroundColor = getRandomColor();
-	document.querySelector('.container').style.backgroundColor = newColor;
+	document.querySelector('body').style.backgroundColor = newColor;
 
 }
 
