@@ -40,7 +40,7 @@ let quotes = [
 		source: `Steven Wright`
 	},
 	{
-		quote: `I refuse to join any club that would have me as a memeber.`, 
+		quote: `I refuse to join any club that would have me as a member.`, 
 		source: `Groucho Marx`, 
 		category: `Stand Up Comedy` 
 	},
