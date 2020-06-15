@@ -79,7 +79,7 @@ let newQuote;
 
 /***
 	The function creates a variable (grabQuote) that uses the Math.random function and the length of the quotes array
-	to get a random number from 0-5. Using the variable newQuote, it puts the random number in the brackets
+	to get a random number from 0-7. Using the variable newQuote, it puts the random number in the brackets
 	to select the object in that position of the array and then returns the selected quote.
 ***/
 
@@ -145,6 +145,9 @@ function printQuote() {
 
 }
 
+
+// This triggers the function printQuote to run every 2 seconds to change the quote and color
+setInterval(printQuote, 3000);
 
 
 /***
