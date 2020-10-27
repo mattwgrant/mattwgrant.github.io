@@ -147,7 +147,7 @@ function printQuote() {
 
 
 // This triggers the function printQuote to run every 3 seconds to change the quote and color
-setInterval(printQuote, 3000);
+setInterval(printQuote, 5000);
 
 
 /***
